@@ -1,0 +1,248 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Understanding Wired and Wireless</title>
+    <link rel="stylesheet" href="design.css">
+</head>
+<body>
+    <header>
+        <div class="logo">
+            <a href="index.html"><img src="/img/newinit.png" alt="logo"></a>
+        </div>
+        <button class="nav_toggle" aria-label="toggle-navigation">
+        <span class="hamburger"></span>
+        </button>
+        <nav class="nav">
+        <ul class="nav-list--items">
+        <li class="nav_item"><a href="#home" class="nav_list">Home</a></li>
+        <li class="nav_item"><a href="#services" class="nav_list">My Services</a></li>
+        <li class="nav_item"><a href="#about" class="nav_list">About Me</a></li>
+        <li class="nav_item"><a href="#work" class="nav_list">Proof of Works</a></li>
+        </ul>
+        </nav>
+    </header>
+
+    <section class="wire">
+        <h1>Wired and Wireless</h1>
+
+        <p>Ethernet is a collection network of rules and protocols used to guide the implementation of computer networking. The ethernet is measured based on bits per second (bps). </p>
+    
+        <h3>Wired connectivity</h3>
+    
+        <p>When setting up a network, you mainly need a cable for transmission of data to take place and interfaces serve as the gateway which a cable will run through to deliver data. RJ45 on both ends of a copper cable and SFP on both ends of fiber optic cable make ethernet transmission possible as it is attached to the node's interface.</p>
+        
+        <p>Here are the ethernet standards for copper cable: </p>
+
+        <table>
+            <thead>
+                <tr>
+                    <th>Speed </th>
+                    <th>Common <br>Name</th>
+                    <th>IEEE <br>Standard</th>
+                    <th>Informal <br>Name</th>
+                    <th>Max <br> Length</th>
+                    <th>Category <br>Name</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>10Mbps</td>
+                    <td>Ethernet</td>
+                    <td>802.3i</td>
+                    <td>10BaseT</td>
+                    <td>100 metres</td>
+                    <td>Category 3</td>
+                </tr>
+                <tr>
+                    <td>100Mbps</td>
+                    <td>Fast Ethernet</td>
+                    <td>802.3u</td>
+                    <td>100 BaseT</td>
+                    <td>100 metres</td>
+                    <td>Category 5</td>
+                </tr>
+                <tr>
+                    <td>1Gbps</td>
+                    <td>Gigabit Ethernet</td>
+                    <td>802.3ab</td>
+                    <td>1000 BaseT</td>
+                    <td>100 metres</td>
+                    <td>Category 5e and 6</td>
+                </tr>
+                <tr>
+                    <td>10Gbps</td>
+                    <td>10 Gigabit Ethernet</td>
+                    <td>802.3an</td>
+                    <td>10GBaseT</td>
+                    <td>100 metres</td>
+                    <td>Category 6a and 7</td>
+                </tr>
+
+            </tbody>
+        </table>
+
+        <p>The wired cables used in setting the ethernet connectivity are UTP copper cables and fiber optic cables.</p>
+
+        <p>The UTP cable is used mostly in a LAN setup. UTP acronym stands for <em>unshielded twisted pair</em>, metallic shields can attract eletrical interferance (crosstalk) and the twisting of the wire helps further protect against this interferance. The UTP cable is made of 8 wires in total, they are color-coded and twisted into 4 pairs, but the design usage of the UTP cable is ethernet and fast ethernet make usage of only 4 wires while gigabit ethernet and 10 gigabit ethernet make use of the complete 8 wires in transmitting and receiving data.</p>
+
+        <p>Under the copper cable there's also the STP, which is the shielded twisted pair cable. The wires are covered in foil to protect against electromagnetic interferance and leakages.</p>
+
+        <p>Copper cables are used with an RJ-45 connector attached to both ends of the cable and its is relatively short.</p>
+
+        <p>Copper cable setup for 10 BaseT and 100 BaseT:</p>
+
+        <img src="" alt="">
+        
+        <p>This setup is what's know as a straight through cable setup used in connecting different nodes to eachother as it allows for full duplex transmission between nodes. In a straight through cable both ends are setup using the same arrangement.</p>
+
+        <p>When connecting similar nodes to eachother such as switch to another switch, the copper cable used is a crossover cable. The wires in a crossover cable are setup using different arrangements on both ends. The reason for the use of a crossover anatomical setup is to prevent data from being blocked from getting through.</p>
+
+        <p>Example: <br> On a switch straight thorugh wire 3 and 6 pins are used for transmitting data, now imagine connecting 2 switches to each using straight cable you've setting the connectivity on both switch interfaces to be on transmission cancelling out any chance of one the switch receiving data. </p>
+
+        <p>Device types and there pins setups:</p>
+
+        <table class="pin">
+            <thead>
+                <tr>
+                    <th>Device</th>
+                    <th>Transmit</th>
+                    <th>Receive</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>Router</td>
+                    <td>Pin 1&2</td>
+                    <td>Pin 3&6</td>
+                </tr>
+                <tr>
+                    <td>Firewall</td>
+                    <td>Pin 1&2</td>
+                    <td>Pin 3&6</td>
+                </tr>
+                <tr>
+                    <td>PC</td>
+                    <td>Pin 1&2</td>
+                    <td>Pin 3&6</td>
+                </tr>
+                <tr>
+                    <td>Switch</td>
+                    <td>Pin 3&6</td>
+                    <td>Pin 1&2</td>
+                </tr>
+            </tbody>
+        </table>
+
+        <p>The good news is this mix up can now be avoid as most modern day network devices come with an AUTO MDI-X feature.</p>
+
+        <p>Copper 1000 BaseT and 10 GBaseT setup is bi-directional as both sides of the cable operate to either transmit or receive data therefore backwards compatable. Recently in addition to these copper cable an STP category 8 has been added as it transmits up a 40Gbps on a distance of 30 metres.</p>
+
+        <p>The fiber optic cable is used in the build to a WAN as the copper cable cannot be used within a scalable range beyond 100 metres, this would lead to collision as they would not be able to hear collision detection. </p>
+
+        <p>The introduction of fiber optic cable ushered in a new way of transmitting data by sending light over fiber glass thanks to the optical strings placed inside because light is really fast. fiber optic cables are used in building larger networks and can be found mostly attached between routers because of its low attenuation it can transmit data to much further distance than copper cable and not dampen or decrease the signal of the transmitted data thanks to an amplifier or repeater that is placed at intervals within the wire to help boost its travelling process and maintain the signal. An SFP (small-form factor pluggable) transceiver module is used to attach the ends of a fiber optic cable to a networking device, each end of the fiber optic comes with two heads one for receiving and the other for transmitting data so no need to worry about the anatomical setup of the wiring inside. The connectors used with a fiber optics cables are SC, LC and MT-RJ(a miniture RJ-45).</p>
+
+        <p>Fiber optic cable structure</p>
+
+        <img src="" alt="">
+
+        <ol>
+            <li>Fiber glass core - The light is transmitted through this core.</li>
+            <li>Cladding that helps the light on its travel at a distance quickly to make sure the light does not bounce out.</li>
+            <li>Protective buffer that protect the glass from breaking.</li>
+            <li>The outer layer jacket of the cable.</li>
+        </ol>
+
+        <p>There are two basic types of fiber optic cable:
+            <ol>
+                <li>Single mode</li>
+                <li>Multi-mode</li>
+            </ol>
+            The multi-mode fiber optic cables have a wider core than single mode, The core allows for multiple waves of light to travel in different angles (it refracts the light on its surface), multi-mode fiber optic cable is longer than copper cables but shorter than single mode fiber optic cable and also cheaper than the single mode fiber optic cable. <br>
+            The single mode fiber optic cable has a smaller diameter for it core, allowing the light to enter from a single angle (straight through) from the laser based transmitter,in that case better bandwidth than multi-mode. Single mode has lower attenuation than multi-mode, therefore allowing for single mode cable to be longer than all the other cables as data can travel to much further distance than even the multi-mode cable can reach.
+
+        </p>
+
+        <p>Fiber optic cable standards:</p>
+
+        <table>
+            <thead>
+                <tr>
+                    <th>Speed</th>
+                    <th>Cable <br>type</th>
+                    <th>IEEE <br>Standard</th>
+                    <th>Informal <br>Name</th>
+                    <th>Max <br>Length</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>1Gbps</td>
+                    <td>Multi-mode and single mode</td>
+                    <td>802.3z</td>
+                    <td>1000 Base-LX</td>
+                    <td>550m and 5km</td>
+                </tr>
+                <tr>
+                    <td>10Gbps</td>
+                    <td>Multi-mode</td>
+                    <td>802.3ae</td>
+                    <td>10 GBase-SR</td>
+                    <td>400m</td>
+                </tr>
+                <tr>
+                    <td>10Gbps</td>
+                    <td>Single mode</td>
+                    <td>802.3ae</td>
+                    <td>10 GBase-LR</td>
+
+                    <td>10km</td>
+                </tr>
+                <tr>
+                    <td>10Gbps</td>
+                    <td>Single mode</td>
+                    <td>802.3ae</td>
+                    <td>10GBase-ER</td>
+                    <td>30km</td>
+                </tr>
+            </tbody>
+        </table>
+
+        <p>Difference between Multi-mode vs Single mode</p>
+
+        <table>
+            <thead>
+                <tr><th>Multi-mode</th>
+                <th>Single mode</th></tr>
+            </thead>
+            <tbody>
+                <tr class="diff">
+                    <td>1. Multi-mode is used to connect inner networking devices at a distance within a building</td>
+                    <td>1. Single mode is used to connect networking devices across buildings </td>
+
+                </tr>
+                <tr class="diff">
+                    <td>2. Less expensive</td>
+                    <td>2. More expensive</td>
+                </tr>
+                <tr class="diff">
+                    <td>3. Encapsulated in glass or plastic.</td>
+                    <td>3. Encapsulated in glass.</td>
+                </tr>
+            </tbody>
+        </table>
+
+        <p>With all this said about Fiber optic cables than why is ethernet still widely used?</p>
+
+        <p>First, copper cables are less expensive than fiber optic cables even the cheapest fiber optic cable is more expensive than multi-mode cables, therefore it is best suited for shorter distance than multi-mode cables. Second, copper cables are easy to maintain you could even make you own ethernet cable. Third, they are scalable through devices as every node is provisioned to accomodate an RJ-45 connector, most switches come with over 10 ports for ethernet connection. Fourth, Fiber optics cables are not easy to maintain and the don't transmit Power through them to the connected device(s).</p>
+
+        <p>Down side to using an ethernet cable are; its vulnerable to EMI, it is a security risk as it leaks signals and it can transmit steady signals beyond the 100 metres make reason being collision could occur.</p>
+
+        
+
+        <h3 class="less">Wireless connectivity</h3>
+    </section>
+    
+</body>
+</html>

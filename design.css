@@ -11,6 +11,7 @@
     /* font weight */
     --fw: 300;
     --fw-bold:900;
+    --fw-mid: 500;
 
     --backg-light:#222021;
     --backg-text:#fff9e3;
@@ -104,6 +105,8 @@ h3{
     margin-bottom: 1em;
 }
 
+/* HOME PAGE */
+
 /* header nav */
 header{
     display: flex;
@@ -124,6 +127,17 @@ header{
     transition: transform;
     transition: transform 250ms cubic-bezier(.5, 0, .5, 1);
 }
+.nav_toggle{
+    padding: .5em;
+    background: transparent;
+    border: 0;
+    cursor: pointer;
+    position: absolute;
+    right: 1em;
+    top: 1em;
+    z-index: 1000;
+}
+
 .nav-list--items{
     list-style: none;
     display: flex;
@@ -144,28 +158,45 @@ header{
     color: var(--backg-text);
 }
 
+
+.nav_open{
+    background: #fff9e3;
+}
+
+/* hamburger ending */
+
+
+
 .logo{
     max-width: 150px;
     margin-left: .5em;
 }
 
 .hamburger{
+    display: block;
+    position: relative;
+}
+.hamburger, 
+.hamburger::before, 
+.hamburger::after {
     background-color: var(--backg-acct);
     width: 2em;
     height: 2px;
     border-radius: 1em;
-    display: block;
-    position: relative;
+    transition: transform 250ms ease-in-out ;
 }
+
 .hamburger::before,
 .hamburger::after{
     content: '';
     position: absolute;
     left: 0;
     right: 0;
-    background-color: var(--backg-acct);
+    /* background-color: var(--backg-acct); */
 }
+.hamburger::before{top:6px}
 
+.hamburger::after{bottom:6px}
 /* End */
 
 
@@ -416,7 +447,7 @@ form textarea:focus, form input:focus{
 form textarea:hover, form input:hover{
     background: gray;
     color: var(--backg-text);
-    transition: 2s;
+    transition: .8s;
 }
 form button{
     padding: 10em auto;
@@ -425,11 +456,16 @@ form button{
     border: none;
     cursor: pointer;
     padding: 1em .5em ;
+    border-radius: .5em;
+    font-size: 1em;
+    font-weight: var(--fw-mid);
 }
 form button:hover{
     color: var(--backg-acct);
     background-color: var(--backg-text);
     transition: .5s;
+    font-size: 1em;
+    font-weight: var(--fw-mid);
 
 }
 
@@ -465,9 +501,9 @@ form button:hover{
     list-style: none;
     display: flex;
     justify-content: center;
-    margin: 2em 0 0;
+    margin: 1em 0 0;
     padding: 0;
-    gap: 5em;
+    gap: 3em;
 }
 .social_list li img{
     width: 5rem;
@@ -484,6 +520,7 @@ li .icon{
 .social_list-link{
     padding: .5em;
 }
+
 p> .buffer{
     font-weight: var(--fw-bold);  
     color: var(--backg-acct); 
@@ -491,4 +528,60 @@ p> .buffer{
 p .buffer:hover{
     opacity: .7;
     text-decoration: underline;
+}
+
+/* NETWORKING PAGE */
+
+/* section */
+.lan{
+    width: 80%;
+    margin: 0 auto;
+}
+.lan h1{
+    margin-bottom: .5em;
+    font-weight: var(--fw-mid);
+}
+.lan .greet{
+    font-weight: var(--fw);
+}
+
+/* TCP IP TOOLS */
+.tcpip{
+    width: 80%;
+    margin: 0 auto;
+}
+.tcpip h1{
+    margin-bottom: .5em;
+    font-weight: var(--fw-mid);
+}
+
+/* WIRED AND WIRELESS  */
+
+.wire{
+    width: 80%;
+    margin: 0 auto;
+}
+
+.wire h1{
+    margin-bottom: 1em;
+    font-weight: var(--fw-mid);
+}
+table{
+    border: 2px solid var(--backg-text);
+    margin: 1em auto 0 auto;
+    text-align: center;
+}
+
+table td{
+    padding: 0 1em;
+}
+.pin{
+    padding: 0 1em 0 1em;
+}
+.diff{
+    text-align: start;
+}
+
+.less{
+    margin-top: 1em;
 }

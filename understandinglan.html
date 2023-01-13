@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Understanding LAN</title>
+    <link rel="stylesheet" href="design.css">
+</head>
+<body>
+    <header>
+        <div class="logo">
+            <a href="index.html"><img src="/img/newinit.png" alt="logo"></a>
+        </div>
+
+        <button class="nav_toggle" aria-label="toggle-navigation">
+        <span class="hamburger"></span>
+        </button>
+        <nav class="nav">
+        <ul class="nav-list--items">
+        <li class="nav_item"><a href="#home" class="nav_list">Home</a></li>
+        <li class="nav_item"><a href="#services" class="nav_list">My Services</a></li>
+        <li class="nav_item"><a href="#about" class="nav_list">About Me</a></li>
+        <li class="nav_item"><a href="#work" class="nav_list">Proof of Works</a></li>
+        </ul>
+        </nav>
+    </header>
+
+
+
+    <section class="lan">
+        <h1>
+            Understanding LAN
+        </h1>
+        <h3 class="greet">Hello Everyone,</h3>
+        <p>
+        29th of September 2022 and this is my first post, I just got back from my scheduled interview at I won't mention the name. Normally people'd say they nailed it, but God I messed up big time. On the bright side I learnt a valueable lesson, plan an interview from the day you decide to apply for the job. </p>
+        <p>Now this is not a blog where I'll talk about what's going in my life, the focus here is strictly computer networking. think of it as a study where you the audience are taking peak into my notes and today I'll or if you're still here, will be diving in to try and understand LAN. <br></p>
+
+        <p>First, LAN is subset in a network, quick reminder a network is collection of connected nodes via a media be it wired or wireless.</p>
+        <p>A node can be any device with the ability to send and receive data, example is a phone or printer.</p>
+        <p>
+            LAN simply put stand for Local Area Network. In LAN connection the focus lays main on 2/3 devices, I say this because one of this devices is still <em>maybe</em> in use by people, but I don't understand why? they'd even be using this device especially with the rate cyberwarfare on a full blown rise. These three devices are a switch, a router and a hub. 
+        </p>
+        <p>Now let's dive deeper starting with a switch and the role it plays in LAN.</p>
+        
+        <h3>What is a switch?</h3>
+        <p>A switch is a network device, which end devices primarily connect to keep in touch with the network. A switch has a MAC address and also a lot of ports where you plug in devices to connect them to it such as a router, another switch and even end devices such as PC or printer. Each port on a switch is assigned a MAC address. A MAC address full disclosure means "Media Access Control", it is a unique identification number assigned to network interface card or its also a physical address. The address itself is 48 bits or 6 bytes long. The address has two sections, the first section consist of the first 3 bytes is called the "organisationally unique identifier" used in identifying the vendor. The second is a unique value assigned by the vendor known as the "unique identifier".<br>
+        Earlier, I made a statement "2/3 devices" now the shorthanded device amongs the 3 devices, is not the switch but rather its called a hub. A switch operates at layer 2 of the OSI model <em>datalink</em>. A switch has a single broadcast domain at first, in the sense that when its plugged into a network the first time any frame it receives it just forwards them out of each and every port where it feels a device is connected to except the port where it initially received the frame. Once this has happened the switch creates what is called a MAC address table </p>
+        <p>A broadcast domain is a range of devices that can receive a broadcast frame sent from a network device. In a broadcast domain the end devices have to be connected to a network device such as a switch. However, In a switch there's still the issue of broadcast storms happen. <em>"What is a broadcast storm?</em> you might ask, simply put it is when a message meant for a particular individual end devices ends up going out to that individual end device and other devices. This will occassionally if switches are connected eachother but with the invention of Spanning Tree Protocol it rarely does happen. A switch creates a collision domain for each node connected that is connected to it. In other to prevent collisions from happening in a switch, the CSMA/CD (Carrier Sense Multiple Access with Collision Detection) has been introduced in switches to prevent collisions from happening. A switch creates these LANs as devices connected to a switch form a LAN.</p>
+
+        <h4>How does it work?</h4>
+        <p>Befroe a switch sends out a frame it listens to where another frame is being transported to and from the network. And if by chance a collision does occur a jamming signal is sent to prevent any further collisions from happening.</p>
+
+        <h3>What is a hub?</h3>
+        <p>I mentioned a hub earlier, a hub is a device similar to a switch but it is more of dull device.</p>
+        <p>Its said to be dull in the sense that hub have a single collision and broadcast domain, so aside from a broadcast storm happening expect a <em>collision</em>. 
+        A collision is when nodes attmept to transmit frame both send the frame at the same time, when this frames cross path on the ethernet then a collision is sure to happen. </p>
+
+
+        <h3>What is a router?</h3>
+        <p> A router is a network device, that is responsible for creating a path for packets to flow in a network using routing protocol across a separate LANs. A router operates in layer 3 of OSI model. Router links together different LAN. Routers by default separate broadcast domains.</p>
+        <h4>Functionalities a router is responsible for in a LAN:</h4>
+        <ol>
+            <li>Packet switching</li>
+            <li>Packet filtering</li>
+            <li>Route selecting, using it routing table.</li>
+            <li>internetworking between LANs.</li>
+        </ol>
+        <h4>Types of transmission:</h4>
+        <ol>
+            <li> Broadcast : From a device to all devices connected to it.</li>
+            <li> Multicast : From a device to a selected few devices connected.</li>
+            <li> Anycast : From a device to a singular device connected.</li>
+        </ol>
+        <br>
+
+        <p> Since this is about LAN it would also make sense to discuss the things that cause LAN traffic:</p>
+        <ol>
+            <li> Too many devices in the broadcast domain.</li>
+            <li> Broadcast storms.</li>
+            <li> Low bandwidth.</li>
+            <li> Muliticasting</li>
+        </ol>
+
+        <p>All of these devices put together make up the internet.</p>
+
+        <h4>What is the internet?</h4>
+        <p>Simply put the internet is a large scale computer network made up of a lot of routers, switches and nodes connected together.</p>
+        <p>What makes a good network?</p>
+        <ol>
+            <li>Reliability</li>
+            <li>Scalability</li>
+            <li>Performance</li>
+        </ol>
+
+
+
+    </section>
+</body>
+</html>

@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>TCP/IP tools</title>
+    <link rel="stylesheet" href="design.css">
+</head>
+<body>
+    <header>
+        <div class="logo">
+            <a href="index.html"><img src="/img/newinit.png" alt="logo"></a>
+        </div>
+        <button class="nav_toggle" aria-label="toggle-navigation">
+        <span class="hamburger"></span>
+        </button>
+        <nav class="nav">
+        <ul class="nav-list--items">
+        <li class="nav_item"><a href="#home" class="nav_list">Home</a></li>
+        <li class="nav_item"><a href="#services" class="nav_list">My Services</a></li>
+        <li class="nav_item"><a href="#about" class="nav_list">About Me</a></li>
+        <li class="nav_item"><a href="#work" class="nav_list">Proof of Works</a></li>
+        </ul>
+        </nav>
+    </header>
+
+    <section class="tcpip">
+        <h1>TCP/IP Tools</h1>
+
+        <h3>What is TCP and what is IP?</h3>
+
+        <P>TCP stands for Transmission Control Protocol.</P>
+
+        <p>IP stands for Internet Protocol.</p>
+        <p>
+            Protocol protocol protocol... simply put this are rule that define how things should work, from a network perspective how a hardware or software should work logically.
+        </p>
+
+        <p>The TCP/IP also known as the internet protocol suite is a set of communication protocols used in the internet network.
+            The TCP/IP model is basically an idealogically or model that defines the process of how data is transmitted through the internet allowing for connectivity of nodes. TCP/IP is made up of a 5 layer tools set such as:</p>
+
+        <ol>
+            <li>Application layer: <dd>This has to do with the format in which the user would access the data, it could either be HTTP/HTTPS, SMTP and FTP.</dd></li>
+            
+            <li>Transport layer: <dd>This has to do with the manner the data was transported to the user, it could be either <strong>TCP</strong> which has to do with establishing a steady connection and error free delivery or <strong>UDP</strong> which has to do with transporting the data whether or not the user get hold of everything contained in the data. in other words, UDP is connectionless.</dd></li>
+
+            <li>Network layer: <dd>This has to do with routing data packets to there destination. Data is sent using logical addresses known as IP. The data is encapsulated in an IP header which states the source where its coming from and the destination it is headed to. IP and Routers are the majors tools used in this layer.</dd></li>
+
+            <li>Data-link layer: <dd>The Data-link layer is more concerned with handling issues within the local area network.
+                This has to do with establishing and maintaining data transfer from the physical layer to ensure error free transmission. The MAC address comes into play as a key factor in transmitting data through this layer as the data intransition is encapsulated in a MAC address header and trailer when sending making the data a frame or the MAC address is deencapsulated on receiving the frame. The MAC address is relied on to mapping out the host computer from where the data was sent and MAC address of the recipient, as the port of a switch are mapped to indicate the MAC address of the device connected to it. Ethernet, wireless access points and switches are the major tools used in the layer.</dd></li>
+           
+            <li>Physical layer: <dd>This is the primary stage. It is the physical and electrical medium used to transmit data such as cables and NIC.</dd></li>
+        </ol>
+    </section>
+    
+</body>
+</html>
